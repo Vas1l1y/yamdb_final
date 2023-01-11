@@ -59,4 +59,4 @@ jobs:
             context: ./api_yamdb/
             file: api_yamdb/Dockerfile
             push: true
-            tags: vas1l1y/infra-web:latest
+            tags: vas1l1y/yamdb_final:latest
