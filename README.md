@@ -1,7 +1,7 @@
 # API of project "Yamdb_final".
 
 ###
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Vas1l1y/yamdb_final/.github/workflows/yamdb_workflow.yml)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Vas1l1y/yamdb_final/.github/workflows/yamdb_workflow.yml/badge.svg)
 ## Description
 
 The Yamdb_final project is a modified YaMDB project.
