@@ -1,8 +1,7 @@
 # API of project "Yamdb_final".
 
 ###
-![AppVeyor](https://img.shields.io/appveyor/build/vas1l1y/yamdb_final)
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Vas1l1y/yamdb_final/yamdb_workflow.yml)
 ## Description
 
 The Yamdb_final project is a modified YaMDB project.
