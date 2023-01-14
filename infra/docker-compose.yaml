@@ -13,8 +13,7 @@ services:
       - db_value:/var/lib/postgresql/data/
     # адрес файла, где хранятся переменные окружения
     env_file:
-#      - /.env
-      - /infra/.env
+      - ./.env
   web:
     build: ../api_yamdb
 #    dockerfile: Dockerfile
@@ -30,8 +29,7 @@ services:
     depends_on:
       - db
     env_file:
-#      - /.env
-      - /infra/.env
+      - ./.env
 
   # Новый контейнер
   nginx:
