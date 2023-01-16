@@ -64,7 +64,7 @@ jobs:
     needs: build_and_push_to_docker_hub
     steps:
       - name: executing remote ssh commands to deploy
-        uses: appleboy/ssh-action@master
+        uses: SpicyPizza/create-envfile@v1.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
@@ -73,13 +73,12 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            touch .env
-            echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
-            echo DB_NAME=${{ secrets.DB_NAME }} >> .env
-            echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
-            echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
-            echo DB_HOST=${{ secrets.DB_HOST }} >> .env
-            echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+            envkey_DB_ENGINE: ${{ secrets.DB_ENGINE }}
+            envkey_DB_NAME: ${{ secrets.DB_NAME }}
+            envkey_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+            envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+            envkey_DB_HOST: ${{ secrets.DB_HOST }}
+            envkey_DB_PORT: ${{ secrets.DB_PORT }}
             sudo docker pull vas1l1y/yamdb_final:latest
             sudo docker-compose up -d
   send_message:

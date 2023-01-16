@@ -90,7 +90,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 Project website
 ```
-The project is available at http://localhost .
+The project is available at http://130.193.49.218/admin/
 ```
 
 ## Author Infra_sp2 project
